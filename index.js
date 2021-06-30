@@ -10,6 +10,7 @@ let schoice = document.getElementById("schoice");
 let thchoice = document.getElementById("thchoice");
 let fourchoice = document.getElementById("fourchoice");
 let nextBtn = document.getElementById("next-btn");
+let allInput = document.getElementsByName("choices");
 let questionIndex = 0;
 let score = 0;
 
@@ -30,25 +31,33 @@ function addQuestion() {
     qCounter.textContent = quesationCount + " / " + "10";
     questionContainer.textContent = questions[questionIndex]["question"];
     fchoice.textContent = questions[questionIndex]["choice1"];
+    allInput[0].setAttribute("value", questions[questionIndex]["choice1"])
+
     schoice.textContent = questions[questionIndex]["choice2"];
+    allInput[1].setAttribute("value", questions[questionIndex]["choice2"])
+
     thchoice.textContent = questions[questionIndex]["choice3"];
+    allInput[2].setAttribute("value", questions[questionIndex]["choice3"])
+
     fourchoice.textContent = questions[questionIndex]["choice4"];
+    allInput[3].setAttribute("value", questions[questionIndex]["choice4"])
+
     questionIndex++;
 
 }
 // check the answer
 function check() {
     let rightAnswer = questions[questionIndex]["answer"];
-    console.log(rightAnswer);
-    let allChoice = document.getElementsByName("choices");
-    console.log(allChoice[0]);
     let choisenAnswer;
     for (let i = 0; i < 4; i++) {
-        if (allChoice[i].checked === true) {
-            choisenAnswer = allChoice[i].dataset.answer;
+        if (allInput[i].checked === true) {
+            choisenAnswer = allInput[i].value;
         }
     }
-    console.log(choisenAnswer);
+    if (choisenAnswer === rightAnswer) {
+        score++;
+    }
+    console.log(score);
 }
 
 
