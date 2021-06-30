@@ -17,9 +17,9 @@ let score = 0;
 
 // click next go to next question 
 nextBtn.onclick = function() {
-    if (quesationCount <= 10) {
-        addQuestion();
+    if (quesationCount < 10) {
         check();
+        addQuestion();
     } else {
         qestionpage.classList.add("hide");
     }
@@ -42,7 +42,6 @@ function addQuestion() {
     fourchoice.textContent = questions[questionIndex]["choice4"];
     allInput[3].setAttribute("value", questions[questionIndex]["choice4"])
 
-    questionIndex++;
 
 }
 // check the answer
@@ -57,6 +56,8 @@ function check() {
     if (choisenAnswer === rightAnswer) {
         score++;
     }
+    questionIndex++;
+
     console.log(score);
 }
 
