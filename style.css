@@ -78,6 +78,10 @@ body {
     margin-left: 58px;
 }
 
+.container section div div form div .start-btn:disabled {
+    opacity: 70%;
+}
+
 
 /*btn */
 
