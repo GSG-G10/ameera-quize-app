@@ -41,7 +41,7 @@ function check() {
     let rightAnswer = questions[questionIndex]["answer"];
     console.log(rightAnswer);
     let allChoice = document.getElementsByName("choices");
-    console.log(allChoice);
+    console.log(allChoice[0]);
     let choisenAnswer;
     for (let i = 0; i < 4; i++) {
         if (allChoice[i].checked === true) {
