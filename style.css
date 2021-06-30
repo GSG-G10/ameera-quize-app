@@ -94,11 +94,55 @@ body {
     padding-bottom: 12px;
 }
 
-{
+.hide {
     display: none;
 }
 
 .flex {
     display: flex;
     align-items: center;
+}
+
+.count-q {
+    color: var(--pcolor);
+    font-size: 25px;
+    width: 11%;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+.question {
+    background-color: var(--pcolor);
+    width: 540px;
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: var(--s-color);
+}
+
+.choices {
+    flex-wrap: wrap;
+    margin-left: 68px;
+}
+
+.choices div {
+    padding: 35px;
+    text-transform: capitalize;
+    background-color: var(--pcolor);
+    border-radius: 10px;
+    width: 254px;
+    margin-bottom: 10px;
+    color: var(--s-color);
+    text-align: center;
+}
+
+.choices div:nth-child(even) {
+    margin-left: 31px;
+}
+
+.next-btn {
+    margin-left: 580px;
 }
