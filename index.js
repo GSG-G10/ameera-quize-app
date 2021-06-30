@@ -3,12 +3,54 @@ let input = document.getElementById("name")
 let welcomepage = document.getElementById("welcome-page");
 let qestionpage = document.getElementById("qestion-page");
 let qCounter = document.getElementById("countQ");
-let queationCount = 0;
+let quesationCount = 0;
 let questionContainer = document.getElementById("question");
 let fchoice = document.getElementById("fchoice");
 let schoice = document.getElementById("schoice");
 let thchoice = document.getElementById("thchoice");
 let fourchoice = document.getElementById("fourchoice");
+let nextBtn = document.getElementById("next-btn");
+let questionIndex = 0;
+let score = 0;
+
+
+// click next go to next question 
+nextBtn.onclick = function() {
+    if (quesationCount <= 10) {
+        addQuestion();
+        check();
+    } else {
+        qestionpage.classList.add("hide");
+    }
+}
+
+// add question 
+function addQuestion() {
+    quesationCount++;
+    qCounter.textContent = quesationCount + " / " + "10";
+    questionContainer.textContent = questions[questionIndex]["question"];
+    fchoice.textContent = questions[questionIndex]["choice1"];
+    schoice.textContent = questions[questionIndex]["choice2"];
+    thchoice.textContent = questions[questionIndex]["choice3"];
+    fourchoice.textContent = questions[questionIndex]["choice4"];
+    questionIndex++;
+
+}
+// check the answer
+function check() {
+    let rightAnswer = questions[questionIndex]["answer"];
+    console.log(rightAnswer);
+    let allChoice = document.getElementsByName("choices");
+    console.log(allChoice);
+    let choisenAnswer;
+    for (let i = 0; i < 4; i++) {
+        if (allChoice[i].checked === true) {
+            choisenAnswer = allChoice[i].dataset.answer;
+        }
+    }
+    console.log(choisenAnswer);
+}
+
 
 
 let questions = [{
@@ -76,7 +118,7 @@ let questions = [{
         answer: "mars",
     },
     {
-        question: "Which planet is named after the Roman goddess of beauty?",
+        question: "Which planet is named after the Roman of beauty?",
         choice1: "Venus",
         choice2: "mars",
         choice3: "sun",
@@ -84,7 +126,7 @@ let questions = [{
         answer: "Venus",
     },
     {
-        question: "Which is the second biggest planet in the solar system?",
+        question: "Which is the second biggest planet ?",
         choice1: "sun",
         choice2: "earth",
         choice3: "Saturn",
@@ -100,11 +142,13 @@ input.onkeyup = function() {
     } else {
         startBtn.disabled = true;
     }
+
 }
 
 // click on start btn go to question page
 startBtn.onclick = function() {
     welcomepage.classList.add("hide");
     qestionpage.classList.remove("hide");
+    addQuestion();
 
 }
