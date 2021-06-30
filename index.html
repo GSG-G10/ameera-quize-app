@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star game</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>welcome to star game</h1>
+        </header>
+        <section>
+            <div class=" welcome-page hide">
+                <div>
+                    <p>star game contains 10 question you should answer correct in these question to win !!!</p>
+                    <p>just choose one option from four option</p>
+                    <p>at the end of the game you can see your score </p>
+                    <p> you can check leaderboard that display player with heighest point </p>
+                    <form>
+                        <label for="name">enter your name :</label>
+                        <div class="flex">
+                            <input type="text" name="name" id="name">
+                            <div class=" btn start-btn" id="start-btn">
+                                start
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="qestion-page">
+                <div class="count-q" id="countQ">1/10</div>
+                <div class="question" id="question"></div>
+                <div class="choices">
+                    <div class="fchoice"></div>
+                    <div class="schoice"></div>
+                    <div class="thchoice"></div>
+                    <div class="fourchoice"></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

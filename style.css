@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+}
+
+:root {
+    --pcolor: #FFFFFF;
+    --s-color: #B5735D;
+}
+
+body {
+    height: 657px;
+    width: 100%;
+    background-image: url("1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container header h1 {
+    font-size: 43px;
+    color: var(--pcolor);
+    font-weight: normal;
+    margin: 30px auto;
+    width: 467px;
+    text-transform: capitalize;
+}
+
+.container section {
+    width: 673px;
+    height: 441px;
+    background-color: #313036;
+    opacity: 90%;
+    margin: 0px auto;
+}
+
+.container section .welcome-page {
+    margin-left: 38px;
+    padding-top: 26px;
+    line-height: 1.5;
+}
+
+.container section div div p {
+    color: var(--pcolor);
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.container section div div form label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize;
+    color: var(--s-color);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.container section div div form input {
+    width: 287px;
+    height: 54px;
+    border-radius: 10px;
+    color: var(--s-color);
+    font-size: 20px;
+}
+
+.container section div div form input:focus {
+    outline: none;
+}
+
+.container section div div form div {
+    justify-content: flex-start;
+}
+
+.container section div div form div .start-btn {
+    margin-left: 58px;
+}
+
+
+/*btn */
+
+.btn {
+    width: 88px;
+    border-radius: 10px;
+    color: var(--pcolor);
+    background-color: var(--s-color);
+    font-size: 20px;
+    text-transform: capitalize;
+    box-shadow: none;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+{
+    display: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
