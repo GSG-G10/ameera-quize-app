@@ -34,6 +34,7 @@ body {
     background-color: #313036;
     opacity: 90%;
     margin: 0px auto;
+    position: relative;
 }
 
 .container section .welcome-page {
@@ -149,4 +150,27 @@ body {
 
 .next-btn {
     margin-left: 580px;
+}
+
+.img {
+    width: 436px;
+    height: 385px;
+    position: absolute;
+    top: 123px;
+    left: 342px;
+}
+
+.scorePage h2 {
+    color: var(--s-color);
+    font-size: 40px;
+    text-align: center;
+}
+
+.scorePage #yourScore {
+    color: var(--pcolor);
+    font-size: 40px;
+    text-align: center;
+    background-color: var(--s-color);
+    width: 50%;
+    margin: 10px auto;
 }

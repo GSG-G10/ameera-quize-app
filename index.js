@@ -11,6 +11,9 @@ let thchoice = document.getElementById("thchoice");
 let fourchoice = document.getElementById("fourchoice");
 let nextBtn = document.getElementById("next-btn");
 let allInput = document.getElementsByName("choices");
+let yourScore = document.getElementById("yourScore");
+let scorePage = document.getElementById("scorePage");
+
 let questionIndex = 0;
 let score = 0;
 
@@ -22,6 +25,10 @@ nextBtn.onclick = function() {
         addQuestion();
     } else {
         qestionpage.classList.add("hide");
+        scorePage.classList.remove("hide");
+        showScore();
+
+
     }
 }
 
@@ -60,6 +67,7 @@ function check() {
 
     console.log(score);
 }
+
 
 
 
@@ -161,4 +169,8 @@ startBtn.onclick = function() {
     qestionpage.classList.remove("hide");
     addQuestion();
 
+}
+
+function showScore() {
+    yourScore.textContent = score;
 }
